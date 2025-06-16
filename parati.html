@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>¡Feliz Día del Padre!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+      background-color: black;
+    }
+
+    .stars {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    .star {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      animation: blink 2s infinite ease-in-out;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+
+    header {
+      background-color: transparent;
+      padding: 1.5rem 1rem 0.5rem;
+      text-align: center;
+    }
+
+    .encabezado-transparente {
+      color: white;
+      font-size: 2rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    }
+
+    main {
+      padding: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1, h2 {
+      margin: 0 0 1rem;
+    }
+
+    .card {
+      background-color: rgba(202, 240, 248, 0.95);
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+      padding: 1.5rem;
+      margin: 1rem auto;
+      max-width: 90%;
+    }
+
+    .card h2 {
+      color: #03045e;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .card p {
+      color: #023e8a;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .footer-transparente {
+      background-color: transparent;
+      color: white;
+      padding: 1rem;
+      font-size: 0.9rem;
+      text-align: center;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    @keyframes parpadeo {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+
+    .parpadeante {
+      animation: parpadeo 2s infinite;
+    }
+
+    /* 📱 Estilos para pantallas pequeñas */
+    @media screen and (max-width: 480px) {
+      .encabezado-transparente {
+        font-size: 1.8rem;
+      }
+
+      .card h2 {
+        font-size: 1.3rem;
+      }
+
+      .card p {
+        font-size: 0.95rem;
+      }
+
+      .footer-transparente {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fondo animado con estrellas -->
+  <div class="stars" id="stars-container"></div>
+
+  <header>
+    <h1 class="encabezado-transparente">Papá, gracias por tanto</h1>
+  </header>
+
+  <main>
+    <div class="card">
+      <h2 class="parpadeante">Gracias, Papá</h2>
+      <p>Hoy, en el Día del Padre, quiero abrir mi corazón y decirte lo que a veces me cuesta expresar con palabras. Gracias, papá… por cada sacrificio que hiciste en silencio, por cada día que te partías la espalda para darnos lo mejor, por cada abrazo que nos dio fuerza sin que tuvieras que decir una sola palabra.</p>
+      <p>Has sido nuestro refugio en los días difíciles y nuestro ejemplo en los días buenos. A veces la vida pasa tan rápido que olvidamos decir lo importante, pero hoy quiero que lo sepas: TE AMAMOS CON TODO NUESTRO CORAZÓN.</p>
+      <p>Gracias por estar, por enseñarnos, por sostenernos… por ser nuestro papá. No hay regalo en el mundo que iguale lo que tú nos has dado con tu amor, tu lucha y tu presencia.</p>
+      <p>Con mucho cariño, Tu Familia.</p>
+    </div>
+  </main>
+
+  <footer class="footer-transparente">
+    &copy; Feliz Día del Padre. Siempre serás nuestro héroe.
+  </footer>
+
+  <script>
+    // Generar estrellas aleatorias
+    const container = document.getElementById('stars-container');
+    const starCount = 150;
+
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      star.style.top = Math.random() * 100 + 'vh';
+      star.style.left = Math.random() * 100 + 'vw';
+      star.style.animationDuration = (1 + Math.random() * 3) + 's';
+      container.appendChild(star);
+    }
+  </script>
+
+</body>
+</html>
+
